@@ -17,7 +17,7 @@ function StatusPill({ status }: { status: Project["status"] }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-[0.6rem] tracking-[0.16em] uppercase",
+        "inline-flex w-fit items-center gap-2 self-start rounded-full border px-3 py-1 font-mono text-[0.6rem] tracking-[0.16em] uppercase",
         inProgress
           ? "border-violet/40 text-violet"
           : "border-primary/40 text-primary",
