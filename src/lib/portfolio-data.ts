@@ -99,9 +99,9 @@ export const projects: Project[] = [
 
 /** Hero marquee photos — swap these entries to change the images. */
 export const heroPhotos = [
-  { src: photo1.url, alt: "Elysee" },
-  { src: photo2.url, alt: "Elysee" },
-  { src: photo3.url, alt: "Elysee" },
+  { src: photo1, alt: "Elysee" },
+  { src: photo2, alt: "Elysee" },
+  { src: photo3, alt: "Elysee" },
 ];
 
 export const journey = ["Discover", "Learn", "Build", "Lead", "Explore"] as const;
