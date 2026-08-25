@@ -34,7 +34,7 @@ function StatusPill({ status }: { status: Project["status"] }) {
 }
 
 /** Project preview — real screenshot when available, otherwise a clean placeholder. */
-function Mockup({ index, image, title }: { index: string; image?: string; title?: string }) {
+function Mockup({ index, image, title }: { index: string; image?: string | undefined; title?: string | undefined }) {
   if (image) {
     return (
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-hairline bg-[var(--surface-2)]">
