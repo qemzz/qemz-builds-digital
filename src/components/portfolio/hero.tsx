@@ -54,31 +54,43 @@ export function Hero() {
       <div aria-hidden className="grid-lines absolute inset-0 -z-10 opacity-70" />
 
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <p
-          className="eyebrow animate-in fade-in slide-in-from-bottom-2 duration-700"
-          style={{ animationDelay: "80ms", animationFillMode: "backwards" }}
-        >
-          Student Developer · Technology Builder
-        </p>
+        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="min-w-0">
+            <p
+              className="eyebrow animate-in fade-in slide-in-from-bottom-2 duration-700"
+              style={{ animationDelay: "80ms", animationFillMode: "backwards" }}
+            >
+              Student Developer · Technology Builder
+            </p>
 
-        <h1 className="mt-6 font-display text-[clamp(2.75rem,11vw,7.5rem)] leading-[0.92] font-bold tracking-[-0.045em]">
-          {lines.map((line, i) => (
-            <span key={line} className="block overflow-hidden">
-              <span
-                className={cn(
-                  "animate-in slide-in-from-bottom-full fade-in block duration-1000 ease-out",
-                  i === 2 && "text-gradient",
-                )}
-                style={{
-                  animationDelay: `${150 + i * 130}ms`,
-                  animationFillMode: "backwards",
-                }}
-              >
-                {line}
-              </span>
-            </span>
-          ))}
-        </h1>
+            <h1 className="mt-6 font-display text-[clamp(2.75rem,11vw,7.5rem)] leading-[0.92] font-bold tracking-[-0.045em]">
+              {lines.map((line, i) => (
+                <span key={line} className="block overflow-hidden">
+                  <span
+                    className={cn(
+                      "animate-in slide-in-from-bottom-full fade-in block duration-1000 ease-out",
+                      i === 2 && "text-gradient",
+                    )}
+                    style={{
+                      animationDelay: `${150 + i * 130}ms`,
+                      animationFillMode: "backwards",
+                    }}
+                  >
+                    {line}
+                  </span>
+                </span>
+              ))}
+            </h1>
+          </div>
+
+          <div
+            className="animate-in fade-in slide-in-from-bottom-4 order-last duration-1000 lg:order-none"
+            style={{ animationDelay: "820ms", animationFillMode: "backwards" }}
+          >
+            <PhotoMarquee />
+          </div>
+        </div>
+
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <p
