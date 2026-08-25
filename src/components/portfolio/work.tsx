@@ -33,8 +33,20 @@ function StatusPill({ status }: { status: Project["status"] }) {
   );
 }
 
-/** Clean placeholder mockup — swap for a real screenshot when available. */
-function Mockup({ index }: { index: string }) {
+/** Project preview — real screenshot when available, otherwise a clean placeholder. */
+function Mockup({ index, image, title }: { index: string; image?: string; title?: string }) {
+  if (image) {
+    return (
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-hairline bg-[var(--surface-2)]">
+        <img
+          src={image}
+          alt={`${title} preview screenshot`}
+          loading="lazy"
+          className="size-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+        />
+      </div>
+    );
+  }
   return (
     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-hairline bg-[var(--surface-2)]">
       <div aria-hidden className="grid-lines absolute inset-0 opacity-60" />
