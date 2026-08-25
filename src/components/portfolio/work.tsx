@@ -102,7 +102,7 @@ function ProjectCard({
         className="group glass relative flex h-full cursor-pointer flex-col gap-5 rounded-2xl p-5 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[var(--shadow-lift)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none sm:p-6"
       >
         <div className="overflow-hidden rounded-xl">
-          <Mockup index={project.index} />
+          <Mockup index={project.index} image={project.image} title={project.title} />
         </div>
 
         <div className="flex items-start justify-between gap-4">
