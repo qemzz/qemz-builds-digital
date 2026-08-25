@@ -1,9 +1,9 @@
 import shotSeatsmart from "@/assets/seatsmart.png.asset.json";
 import shotLibrary from "@/assets/library.png.asset.json";
 import shotSchool from "@/assets/school-website.png.asset.json";
-import photo1 from "@/assets/dsc_0031.jpg.asset.json";
-import photo2 from "@/assets/gnx0075.jpg.asset.json";
-import photo3 from "@/assets/qemz_10.jpg.asset.json";
+import photo1 from "@/assets/elysee1.JPG";
+import photo2 from "@/assets/elysee2.JPG";
+import photo3 from "@/assets/qemz(10).JPG";
 
 export type ProjectStatus = "Built / Prototype" | "Built" | "In Progress";
 
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     index: "01",
     title: "SeatSmart",
     link: "https://gsobseat.lovable.app",
-    image: shotSeatsmart.url,
+    image: shotSeatsmart,
     summary:
       "A school-focused system designed to simplify and automate student table allocation instead of relying on manual organization.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     index: "02",
     title: "Library Management System",
     link: "https://libz.lovable.app",
-    image: shotLibrary.url,
+    image: shotLibrary,
     summary:
       "A digital library system focused on organizing books, managing users and making library resources easier to access.",
     tags: ["React", "TypeScript", "Vite", "Supabase"],
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     index: "03",
     title: "School Website",
     link: "https://gsobindatwa.com",
-    image: shotSchool.url,
+    image: shotSchool,
     summary:
       "A website project created to improve a school's digital presence and make information easier to access.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -99,9 +99,9 @@ export const projects: Project[] = [
 
 /** Hero marquee photos — swap these entries to change the images. */
 export const heroPhotos = [
-  { src: photo1.url, alt: "Qemz speaking on stage with a microphone" },
-  { src: photo2.url, alt: "Qemz outdoors at school" },
-  { src: photo3.url, alt: "Qemz standing on the school field" },
+  { src: photo1.url, alt: "Elysee" },
+  { src: photo2.url, alt: "Elysee" },
+  { src: photo3.url, alt: "Elysee" },
 ];
 
 export const journey = ["Discover", "Learn", "Build", "Lead", "Explore"] as const;
