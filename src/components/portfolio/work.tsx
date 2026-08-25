@@ -33,8 +33,20 @@ function StatusPill({ status }: { status: Project["status"] }) {
   );
 }
 
-/** Clean placeholder mockup — swap for a real screenshot when available. */
-function Mockup({ index }: { index: string }) {
+/** Project preview — real screenshot when available, otherwise a clean placeholder. */
+function Mockup({ index, image, title }: { index: string; image?: string | undefined; title?: string | undefined }) {
+  if (image) {
+    return (
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-hairline bg-[var(--surface-2)]">
+        <img
+          src={image}
+          alt={`${title} preview screenshot`}
+          loading="lazy"
+          className="size-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+        />
+      </div>
+    );
+  }
   return (
     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-hairline bg-[var(--surface-2)]">
       <div aria-hidden className="grid-lines absolute inset-0 opacity-60" />
@@ -90,7 +102,7 @@ function ProjectCard({
         className="group glass relative flex h-full cursor-pointer flex-col gap-5 rounded-2xl p-5 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[var(--shadow-lift)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none sm:p-6"
       >
         <div className="overflow-hidden rounded-xl">
-          <Mockup index={project.index} />
+          <Mockup index={project.index} image={project.image} title={project.title} />
         </div>
 
         <div className="flex items-start justify-between gap-4">
