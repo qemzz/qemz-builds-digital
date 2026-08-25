@@ -1,3 +1,7 @@
+import photo1 from "@/assets/dsc_0031.jpg.asset.json";
+import photo2 from "@/assets/gnx0075.jpg.asset.json";
+import photo3 from "@/assets/qemz_10.jpg.asset.json";
+
 export type ProjectStatus = "Built / Prototype" | "Built" | "In Progress";
 
 export type Project = {
@@ -11,6 +15,8 @@ export type Project = {
   solution: string;
   technology: string[];
   learning: string;
+  /** Live site URL — omit when there is nothing to visit yet. */
+  link?: string;
   /** Replace with a real screenshot when available. */
   image?: string;
 };
@@ -21,6 +27,7 @@ export const projects: Project[] = [
     id: "seatsmart",
     index: "01",
     title: "SeatSmart",
+    link: "https://gsobseat.lovable.app",
     summary:
       "A school-focused system designed to simplify and automate student table allocation instead of relying on manual organization.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -37,6 +44,7 @@ export const projects: Project[] = [
     id: "library",
     index: "02",
     title: "Library Management System",
+    link: "https://libz.lovable.app",
     summary:
       "A digital library system focused on organizing books, managing users and making library resources easier to access.",
     tags: ["React", "TypeScript", "Vite", "Supabase"],
@@ -53,6 +61,7 @@ export const projects: Project[] = [
     id: "school-website",
     index: "03",
     title: "School Website",
+    link: "https://gsobindatwa.com",
     summary:
       "A website project created to improve a school's digital presence and make information easier to access.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -80,6 +89,13 @@ export const projects: Project[] = [
     learning:
       "Still building — designing for two very different users at once is the hardest part so far.",
   },
+];
+
+/** Hero marquee photos — swap these entries to change the images. */
+export const heroPhotos = [
+  { src: photo1.url, alt: "Qemz speaking on stage with a microphone" },
+  { src: photo2.url, alt: "Qemz outdoors at school" },
+  { src: photo3.url, alt: "Qemz standing on the school field" },
 ];
 
 export const journey = ["Discover", "Learn", "Build", "Lead", "Explore"] as const;
@@ -111,11 +127,15 @@ export type ContactLink = {
 };
 
 export const contactLinks: ContactLink[] = [
-  { label: "Email", handle: "Add email address", href: null },
-  { label: "GitHub", handle: "Add GitHub profile", href: null },
-  { label: "LinkedIn", handle: "Add LinkedIn profile", href: null },
-  { label: "Instagram", handle: "Add Instagram profile", href: null },
+  { label: "Email", handle: "knosaint6@gmail.com", href: "mailto:knosaint6@gmail.com" },
+  { label: "Telephone", handle: "+250 795 017 456", href: "tel:+250795017456" },
+  {
+    label: "Instagram",
+    handle: "@qemn.z_",
+    href: "https://www.instagram.com/qemn.z_?igsi=bGhyaTcyOGFkOTVo",
+  },
 ];
+
 
 export const navItems = [
   { label: "Work", href: "#work" },

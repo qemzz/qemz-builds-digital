@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { heroFlow } from "@/lib/portfolio-data";
 import { cn } from "@/lib/utils";
+import { PhotoMarquee } from "./photo-marquee";
 
 const lines = ["I BUILD", "DIGITAL", "SOLUTIONS."];
 
@@ -54,62 +55,72 @@ export function Hero() {
       <div aria-hidden className="grid-lines absolute inset-0 -z-10 opacity-70" />
 
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <p
-          className="eyebrow animate-in fade-in slide-in-from-bottom-2 duration-700"
-          style={{ animationDelay: "80ms", animationFillMode: "backwards" }}
-        >
-          Student Developer · Technology Builder
-        </p>
+        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="min-w-0">
+            <p
+              className="eyebrow animate-in fade-in slide-in-from-bottom-2 duration-700"
+              style={{ animationDelay: "80ms", animationFillMode: "backwards" }}
+            >
+              Student Developer · Technology Builder
+            </p>
 
-        <h1 className="mt-6 font-display text-[clamp(2.75rem,11vw,7.5rem)] leading-[0.92] font-bold tracking-[-0.045em]">
-          {lines.map((line, i) => (
-            <span key={line} className="block overflow-hidden">
-              <span
-                className={cn(
-                  "animate-in slide-in-from-bottom-full fade-in block duration-1000 ease-out",
-                  i === 2 && "text-gradient",
-                )}
-                style={{
-                  animationDelay: `${150 + i * 130}ms`,
-                  animationFillMode: "backwards",
-                }}
+            <h1 className="mt-6 font-display text-[clamp(2.75rem,11vw,7.5rem)] leading-[0.92] font-bold tracking-[-0.045em]">
+              {lines.map((line, i) => (
+                <span key={line} className="block overflow-hidden">
+                  <span
+                    className={cn(
+                      "animate-in slide-in-from-bottom-full fade-in block duration-1000 ease-out",
+                      i === 2 && "text-gradient",
+                    )}
+                    style={{
+                      animationDelay: `${150 + i * 130}ms`,
+                      animationFillMode: "backwards",
+                    }}
+                  >
+                    {line}
+                  </span>
+                </span>
+              ))}
+            </h1>
+
+            <p
+              className="animate-in fade-in slide-in-from-bottom-3 mt-10 max-w-xl text-base leading-relaxed text-muted-foreground duration-1000 sm:text-lg"
+              style={{ animationDelay: "620ms", animationFillMode: "backwards" }}
+            >
+              I explore technology by turning real-world problems into digital ideas,
+              interfaces and systems.
+            </p>
+
+            <div
+              className="animate-in fade-in slide-in-from-bottom-3 mt-8 flex flex-wrap gap-3 duration-1000"
+              style={{ animationDelay: "760ms", animationFillMode: "backwards" }}
+            >
+              <button
+                type="button"
+                onClick={() => scrollTo("#work")}
+                className="group inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-all duration-300 hover:shadow-[var(--shadow-lift)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               >
-                {line}
-              </span>
-            </span>
-          ))}
-        </h1>
-
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
-          <p
-            className="animate-in fade-in slide-in-from-bottom-3 max-w-xl text-base leading-relaxed text-muted-foreground duration-1000 sm:text-lg"
-            style={{ animationDelay: "620ms", animationFillMode: "backwards" }}
-          >
-            I explore technology by turning real-world problems into digital ideas,
-            interfaces and systems.
-          </p>
+                Explore My Work
+                <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollTo("#contact")}
+                className="inline-flex h-12 items-center rounded-full border border-border px-6 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/60 hover:bg-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+              >
+                Let&apos;s Connect
+              </button>
+            </div>
+          </div>
 
           <div
-            className="animate-in fade-in slide-in-from-bottom-3 flex flex-wrap gap-3 duration-1000"
-            style={{ animationDelay: "760ms", animationFillMode: "backwards" }}
+            className="animate-in fade-in slide-in-from-bottom-4 duration-1000"
+            style={{ animationDelay: "820ms", animationFillMode: "backwards" }}
           >
-            <button
-              type="button"
-              onClick={() => scrollTo("#work")}
-              className="group inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-all duration-300 hover:shadow-[var(--shadow-lift)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-            >
-              Explore My Work
-              <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollTo("#contact")}
-              className="inline-flex h-12 items-center rounded-full border border-border px-6 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/60 hover:bg-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-            >
-              Let&apos;s Connect
-            </button>
+            <PhotoMarquee />
           </div>
         </div>
+
 
         <div
           className="animate-in fade-in slide-in-from-bottom-4 mt-16 duration-1000"

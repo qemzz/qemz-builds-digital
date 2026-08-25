@@ -213,6 +213,54 @@
   animation: pulse-node 3.6s ease-in-out infinite;
 }
 
+@keyframes marquee-y {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@utility marquee-track-y {
+  animation: marquee-y 46s linear infinite;
+}
+
+@utility marquee-track-x {
+  animation: marquee-x 46s linear infinite;
+}
+
+@utility marquee-mask-y {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+@utility marquee-mask-x {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
