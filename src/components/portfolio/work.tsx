@@ -119,7 +119,22 @@ function ProjectCard({
             </span>
           ))}
         </div>
-        <StatusPill status={project.status} />
+        <div className="flex flex-wrap items-center gap-4">
+          <StatusPill status={project.status} />
+          {project.link ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noreferrer noopener"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-primary transition-colors duration-300 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+            >
+              View Project
+              <ArrowUpRight className="size-4" />
+            </a>
+          ) : null}
+        </div>
+
       </article>
     </Reveal>
   );
@@ -174,9 +189,21 @@ export function Work() {
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="mt-2">
+              <div className="mt-2 flex flex-wrap items-center gap-4">
                 <StatusPill status={active.status} />
+                {active.link ? (
+                  <a
+                    href={active.link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-primary transition-colors duration-300 hover:text-foreground"
+                  >
+                    Visit Website
+                    <ArrowUpRight className="size-4" />
+                  </a>
+                ) : null}
               </div>
+
 
               <div className="mt-4 space-y-5">
                 <DetailBlock label="Problem">{active.problem}</DetailBlock>

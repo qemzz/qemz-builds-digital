@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { heroFlow } from "@/lib/portfolio-data";
 import { cn } from "@/lib/utils";
+import { PhotoMarquee } from "./photo-marquee";
 
 const lines = ["I BUILD", "DIGITAL", "SOLUTIONS."];
 
