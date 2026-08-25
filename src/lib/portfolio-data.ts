@@ -111,11 +111,15 @@ export type ContactLink = {
 };
 
 export const contactLinks: ContactLink[] = [
-  { label: "Email", handle: "Add email address", href: null },
-  { label: "GitHub", handle: "Add GitHub profile", href: null },
-  { label: "LinkedIn", handle: "Add LinkedIn profile", href: null },
-  { label: "Instagram", handle: "Add Instagram profile", href: null },
+  { label: "Email", handle: "knosaint6@gmail.com", href: "mailto:knosaint6@gmail.com" },
+  { label: "Telephone", handle: "+250 795 017 456", href: "tel:+250795017456" },
+  {
+    label: "Instagram",
+    handle: "@qemn.z_",
+    href: "https://www.instagram.com/qemn.z_?igsi=bGhyaTcyOGFkOTVo",
+  },
 ];
+
 
 export const navItems = [
   { label: "Work", href: "#work" },
