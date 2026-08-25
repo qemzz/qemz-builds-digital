@@ -3,7 +3,7 @@ import shotLibrary from "@/assets/library.png.asset.json";
 import shotSchool from "@/assets/school-website.png.asset.json";
 import photo1 from "@/assets/elysee1.JPG";
 import photo2 from "@/assets/elysee2.JPG";
-import photo3 from "@/assets/qemz(10).JPG";
+import photo3 from "@/assets/qemz_10.JPG";
 
 export type ProjectStatus = "Built / Prototype" | "Built" | "In Progress";
 
