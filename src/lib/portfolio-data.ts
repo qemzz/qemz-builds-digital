@@ -31,6 +31,7 @@ export const projects: Project[] = [
     index: "01",
     title: "SeatSmart",
     link: "https://gsobseat.lovable.app",
+    image: shotSeatsmart.url,
     summary:
       "A school-focused system designed to simplify and automate student table allocation instead of relying on manual organization.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -48,6 +49,7 @@ export const projects: Project[] = [
     index: "02",
     title: "Library Management System",
     link: "https://libz.lovable.app",
+    image: shotLibrary.url,
     summary:
       "A digital library system focused on organizing books, managing users and making library resources easier to access.",
     tags: ["React", "TypeScript", "Vite", "Supabase"],
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     index: "03",
     title: "School Website",
     link: "https://gsobindatwa.com",
+    image: shotSchool.url,
     summary:
       "A website project created to improve a school's digital presence and make information easier to access.",
     tags: ["HTML", "CSS", "JavaScript"],
