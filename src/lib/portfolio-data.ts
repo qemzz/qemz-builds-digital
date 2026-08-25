@@ -1,3 +1,6 @@
+import shotSeatsmart from "@/assets/seatsmart.png.asset.json";
+import shotLibrary from "@/assets/library.png.asset.json";
+import shotSchool from "@/assets/school-website.png.asset.json";
 import photo1 from "@/assets/dsc_0031.jpg.asset.json";
 import photo2 from "@/assets/gnx0075.jpg.asset.json";
 import photo3 from "@/assets/qemz_10.jpg.asset.json";
